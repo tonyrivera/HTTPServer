@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace HTTPServer
 {
@@ -29,14 +30,14 @@ namespace HTTPServer
                 HttpListenerRequest request = context.Request;
                 HttpListenerResponse response = context.Response;
 
-                requestLogger(request);
+                RequestLogger(request);
 
                 response.OutputStream.Write(data);
                 response.Close();
             }
         }
 
-        static void requestLogger(HttpListenerRequest request)
+        static void RequestLogger(HttpListenerRequest request)
         {
             string method = request.HttpMethod;
             string url = request.Url.ToString();
@@ -45,5 +46,6 @@ namespace HTTPServer
 
             Console.WriteLine($"{date} - {method} - {url} - {client}");
         }
+
     }
 }
