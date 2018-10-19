@@ -6,12 +6,13 @@ namespace HTTPServer
 {
     class Server
     {
+
         static void Main(string[] args)
         {
             // Config
             const string Uri = "http://localhost:";
             const int Port = 1337;
-            const string Html = "<b>Test</b>";
+            const string Html = "<!DOCTYPE html><html><body>Success!</body></html>";
             byte[] data = Encoding.UTF8.GetBytes(Html);
 
             HttpListener listener = new HttpListener();
@@ -21,7 +22,8 @@ namespace HTTPServer
             Console.WriteLine("Server started on " + Uri + Port.ToString());
 
             // HTTP Server Loop
-            while(true){
+            while(true)
+            {
 
                 HttpListenerContext context = listener.GetContext();
                 HttpListenerRequest request = context.Request;
