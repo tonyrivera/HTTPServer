@@ -2,8 +2,10 @@
 A Simple HTTP Server written in C# using .NET Core
 
 ### Installation
-`git clone https://github.com/tonyrivera/HTTPServer.git'
+`git clone https://github.com/tonyrivera/HTTPServer.git`
+
 `cd path/to/HTTPServer/`
+
 `dotnet retore` // Not required in dotnet version 2.0 and above.
 
 ### Usage from source
