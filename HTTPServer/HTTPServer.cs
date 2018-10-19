@@ -41,8 +41,9 @@ namespace HTTPServer
             string method = request.HttpMethod;
             string url = request.Url.ToString();
             string client = request.RemoteEndPoint.ToString();
+            string date = DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
 
-            Console.WriteLine($"{method} {url} from {client}");
+            Console.WriteLine($"{date} - {method} - {url} - {client}");
         }
     }
 }
