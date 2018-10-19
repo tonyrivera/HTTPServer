@@ -24,7 +24,7 @@ namespace HTTPServer
             while(true){
 
                 HttpListenerContext context = listener.GetContext();
-                // HttpListenerRequest request = context.Request;
+                HttpListenerRequest request = context.Request;
                 HttpListenerResponse response = context.Response;
                 response.OutputStream.Write(data);
                 response.Close();
