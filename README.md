@@ -6,7 +6,7 @@ A Simple HTTP Server written in C# using .NET Core
 
 `cd path/to/HTTPServer/`
 
-`dotnet retore` // Not required in dotnet version 2.0 and above.
+`dotnet restore` // Not required in dotnet version 2.0 and above.
 
 ### Usage from source
 `dotnet run -p HTTPServer/HTTPServer.csproj`
